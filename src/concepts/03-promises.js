@@ -26,8 +26,6 @@ export const promisesComponent = (element) => {
   const id1 = "5d86371fd55e2e2a30fe1cc4";
   const id2 = "5d86371fd55e2e2a30fe1ccb2";
 
-  let hero1;
-
   Promise.all([findHero(id1), findHero(id2)])
     .then(([hero1, hero2]) => {
       renderTwoHeroes(hero1, hero2);

@@ -14,8 +14,15 @@ export const callbacksComponent = (element) => {
       element.innerHTML = error;
       return;
     }
+    findHero(id2, (error, hero2) => {
+      // element.innerHTML = hero1?.name || `Hero with id ${id} not found`;
+      if (error) {
+        element.innerHTML = error;
+        return;
+      }
 
-    element.innerHTML = `${hero1.name}`;
+      element.innerHTML = `${hero1.name} | ${hero2.name}`;
+    });
   });
 };
 
